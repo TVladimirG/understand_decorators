@@ -6,6 +6,19 @@
 # Декоратор - функция принимающая на вход другую функцию
 # Декораторы могут быть вложены друг в друга
 
+# Пример простейшего декоратора:
+# def decorator(func):
+#     def wrapper():
+#         print('Что-то выполняется дополнительное...')
+#         value = func()
+#         return value
+#     return wrapper
+# 
+# @decorator
+# def my_func() -> str:
+#     return 'my_func'
+
+
 def my_decorator(show_info=False):
     def decorator(func):     # Вот и сам декоратор, принимает функцию
         def wrapper(*args, **qwargs):
